@@ -1,0 +1,21 @@
+Package: Reurrep
+Type: Package
+Title: Manages CFE Database Datasets
+Version: 0.1.0
+Authors@R: c(person("Mateusz", "Zoltak", role = c("aut", "cre"), email = "zozlak@zozlak.org"))
+Maintainer: Mateusz Zoltak <zozlak@zozlak.org>
+Description: Manages CFE database datasets.
+License: MIT + file LICENSE
+Imports:
+  methods,
+  dplyr,
+  tidyr,
+  DBI,
+  RPostgreSQL
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Suggests: 
+  knitr,
+  rmarkdown
+VignetteBuilder: knitr
