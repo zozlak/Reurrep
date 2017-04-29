@@ -3,7 +3,6 @@
 #' removes given dataset from the database
 #' @param country country name
 #' @param dataSource data source name
-#' @param user database user name
 #' @param password database password
 #' @export
 remove_dataset = function(country, dataSource, user, password) {
@@ -14,7 +13,7 @@ remove_dataset = function(country, dataSource, user, password) {
     is.vector(password), is.character(password), length(password) == 1, all(!is.na(password))
   )
 
-  conn = DBI::dbConnect(DBI::dbDriver('PostgreSQL'), host = 'zozlak.org', dbname = 'eurrep', user = user, password = password)
+  conn = DBI::dbConnect(DBI::dbDriver('PostgreSQL'), host = 'zozlak.org', dbname = 'eurrep', user = 'eurrep', password = password)
   param = list(c = country, ds = dataSource)
   count = unlist(db_exec(
     conn,
